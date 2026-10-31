@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>Retour vers Finbase</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Retour vers Finbase</h1>
+
+  <section id="ok" hidden>
+    <p>L'autorisation de votre banque est reçue. Finbase va s'ouvrir.</p>
+    <p><a id="open" class="button" href="#">Ouvrir Finbase</a></p>
+    <p class="help">Finbase ne s'ouvre pas&#8239;? Copiez l'adresse ci-dessous, puis collez-la dans Finbase, dans la fenêtre de connexion de la banque.</p>
+    <label for="link">Adresse à coller dans Finbase</label>
+    <textarea id="link" readonly rows="4"></textarea>
+    <p><button id="copy" type="button">Copier l'adresse</button> <span id="copied" role="status"></span></p>
+  </section>
+
+  <section id="refused" hidden>
+    <p>La banque n'a pas donné son autorisation, ou la connexion a été annulée.</p>
+    <p class="help">Retournez dans Finbase pour réessayer.</p>
+  </section>
+
+  <section id="invalid" hidden>
+    <p>Cette page sert uniquement au retour depuis votre banque vers l'application Finbase.</p>
+  </section>
+
+  <p class="note">Cette page ne demande jamais d'identifiant ni de mot de passe, n'enregistre rien et ne contient aucune donnée.</p>
+</main>
+<script src="callback.js"></script>
+</body>
+</html>
